@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <script type='text/javascript'>
+  (function titleScroller(text) {
+    document.title = text;
+    console.log(text);
+    setTimeout(function () {
+        titleScroller(text.substr(1) + text.substr(0, 1));
+    }, 500);
+}(" keepingUP.Online "));</script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div style="position:fixed; top: 0px; background-color: rgba(170, 170, 170, 0.521); margin-bottom: 10px; margin-left: 0px; width: 100%">
+	<h1>keepingUP.Online</h1>
+	<a href="/" style="margin: 5px;">Home</a>
+  <a href="/team" style="margin: 5px">Team</a>
+  <a href="/scoreboard" style="margin: 5px;">Scoreboard</a>
+	<a href="/cyow" style="margin: 5px;">Create your own WorkGroup</a>
+	<a href="/about" style="margin: 5px;">About Us</a>
+	<br>
+</div>
+
+</body>
+</html>
